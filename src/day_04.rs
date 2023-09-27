@@ -27,9 +27,7 @@ impl Pair {
     }
 
     fn partial_overlap(&self) -> bool {
-        let left_overlap = self.left.0 <= self.right.1 && self.left.1 >= self.right.0;
-        let right_overlap = self.right.0 <= self.left.1 && self.right.1 >= self.left.0;
-        left_overlap || right_overlap
+        self.left.0 <= self.right.1 && self.left.1 >= self.right.0
     }
 }
 
