@@ -29,8 +29,7 @@ impl Bag {
         let compartments = self.compartments.len();
         self.compartments
             .iter()
-            .map(|comp| comp.iter().unique())
-            .flatten()
+            .flat_map(|comp| comp.iter().unique())
             .counts()
             .iter()
             .find_map(|(item, in_compartments)| {
