@@ -42,6 +42,7 @@ dependencies = [
  "aoc-framework",
  "color-eyre",
  "itertools",
+ "lazy_static",
  "regex",
  "thiserror",
 ]
