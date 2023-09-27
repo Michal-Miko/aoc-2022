@@ -116,6 +116,7 @@ impl AocTask for Day05 {
 
         let mut peekable_input = input.peekable();
         let dockyard = Rc::new(RefCell::new(Dockyard::new(
+            // Get dockyard size from the first line since it's always padded to full length
             peekable_input
                 .peek()
                 .map(|first| first.len() / 4 + 1)
